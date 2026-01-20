@@ -1,0 +1,92 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    @apply fixed bottom-0 left-0 right-0 z-30 backdrop-blur-md;
+    animation: fade-in 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    animation: fade-out 0.3s ease-in-out;
+}
+
+
+.card {
+    @apply absolute top-0 left-0 w-full h-full bg-white;
+    @apply translate-x-14 scale-95  shadow-2xl blur-sm cursor-pointer hover:blur-none;
+    @apply w-3xs;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    @apply hover:shadow-2xl rounded-xl;
+    @apply transition-all duration-300;
+    /* @apply relative; */
+    & img {
+        @apply absolute top-0 left-0 w-full object-cover;
+    }
+
+    & .card__content {
+        @apply  w-full inline-flex items-end p-4.5 text-white z-10 relative h-80;
+        @apply after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-full after:bg-black/45 after:backdrop-blur-xs;
+
+        /* @apply backdrop-blur-xs; */
+    }
+
+}
+
+.card--highlighted {
+    @apply translate-x-0 z-20 scale-100 shadow-2xl backdrop-blur-3xl blur-none;
+}
+
+.card--horizontal {
+    @apply grid grid-cols-2  rounded-xl flex-auto  h-120 w-full;
+
+    img {
+        @apply static w-full h-full max-h-120 object-cover rounded-xl;
+        @apply border-4 border-black/50;
+    }
+}
+
+.imgs {
+    @apply relative flex w-screen overflow-hidden h-full;
+
+    img {
+        @apply absolute top-0 left-0 w-fit h-full translate-x-1/2 rounded-xl;
+        @apply border-4 border-black/50;
+    }
+    
+}
+img[style*="campaing-index: 0"] {
+    @apply rotate-2 z-10;
+}
+
+
+.menu {
+    @apply px-4 py-4;
+    @apply hover:font-medium;
+    @apply transition-all duration-300;
+}
+
+
+.preview {
+    background: black;
+    height: 10%;
+    border-radius: 0 0 100% 100%;
+}
+
+.blob--circle {
+    @apply bg-zinc-800;
+    
+    
+}
+.blob--circle div {
+    @apply h-10 rounded-full bg-white;
+    border-radius: 50% 50% 0 0;
+}

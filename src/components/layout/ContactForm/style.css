@@ -1,0 +1,17 @@
+.contact-form {
+    input, textarea {
+        @apply backdrop-blur-2xl shadow bg-white rounded-xl p-2 text-black;
+        @apply focus:bg-white focus:shadow-lg;
+        @apply transition-all duration-300;
+        @apply outline-none;
+        @apply border border-slate-200;
+        @apply w-full;
+    }
+    textarea {
+        @apply h-40;
+    }
+    button {
+        @apply bg-blue-500 text-white rounded-xl p-2;
+        @apply border-slate-500;
+    }
+}

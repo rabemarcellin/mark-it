@@ -1,0 +1,7 @@
+{
+    "Welcome to React": "Bienvenue à React et react-i18next",
+    "menu": {
+        "offer": "Offres & Prestations",
+        "contact": "Nous contacter"
+    }
+}

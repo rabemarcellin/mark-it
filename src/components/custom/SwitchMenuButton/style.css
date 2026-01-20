@@ -1,0 +1,15 @@
+.switch-menu-button {
+    @apply bg-slate-200 p-1 rounded-full flex items-center justify-center gap-2 relative;
+
+    /* &::after {
+        @apply content-[''] absolute top-0 left-0 w-[45%] h-full bg-white rounded-full;
+    } */
+}
+
+.switch-menu-button button {
+    @apply  p-2 rounded-full flex-auto z-10;
+
+    &.active {
+        @apply bg-white text-slate-500 shadow-md;
+    }
+}

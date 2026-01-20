@@ -1,0 +1,16 @@
+.link--external {
+    @apply transition-all duration-300 font-semibold;
+    @apply inline-flex justify-center items-center gap-4 bg-white rounded-xl;
+    @apply hover:shadow-2xl hover:bg-white hover:translate-y-[4px] hover:translate-x-[4px] hover:transition-all duration-300;
+    @apply p-2 rounded-full;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.link__btn {
+    @apply w-10 h-10 rounded-full bg-blue-500 flex-none flex items-center justify-center cursor-pointer;
+}

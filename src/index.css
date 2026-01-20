@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@import './pages/LandingPage/style.css';
+@import './components/custom/ExternalLink/style.css';
+@import './components/custom/SwitchMenuButton/style.css';
+@import './components/layout/ContactForm/style.css';
+
+body {
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
