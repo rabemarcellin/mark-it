@@ -14,6 +14,7 @@ import ContactForm from "@/components/layout/ContactForm";
 import { FACEBOOK_PAGE_NAME, FACEBOOK_PAGE_URL, MESSENGER_URL } from "@/utils/constants";
 import PricingCardSecondary from "@/components/custom/PricingCardSecondary";
 import AppLogo from "@/components/custom/Logo";
+import { Link } from "react-router";
 
 
 const LandingPage = () => {
@@ -46,7 +47,7 @@ const LandingPage = () => {
           <p className="text-center lg:text-start text-5xl font-medium mb-4">
             Bienvenue sur notre site web
           </p>
-          <p className="text-center lg:text-start my-4">Nous sommes basés à Madagascar 🇲🇬 qui vendent différentes 
+          <p className="text-center lg:text-start my-4">Nous sommes basés à Madagascar 🇲🇬 qui vendent différentes
             articles sur Facebook et en parallèle aide les
             vendeurs à valoriser plus leur services et à gagner en visibilité sur Facebook,
             via notre application de générateur de facture expresso, et notre service de boost page facebook.
@@ -86,24 +87,25 @@ const LandingPage = () => {
             <div className="blob--circle">
               <div />
             </div>
-            <div className="pt-8 p-2 px-8 bg-white lg:flex flex-col lg:justify-center">
+            <div className="pt-8 p-2 px-8 bg-white lg:flex flex-col lg:justify-center flex-nonem max-w-xl">
               <div className="text-center my-4">
-                <h1 className="text-2xl font-medium">Application générateur de facture</h1>
+                <h1 className="text-2xl font-medium">Mini imprimante thermique</h1>
               </div>
 
               <p className="my-4 text-slate-500 text-center">
-                Genérer un facture on un click via des formulaires très simples
+                Idéale pour les entreprises, une mini-imprimante portable et facile à utiliser
+                pour imprimer des factures, des bons de commande, des bons de livraison, etc.
+                <br/>
+                Expresso
               </p>
 
               <div className="flex items-center justify-center gap-2">
-
-                <div className="flex items-center justify-center gap-2">
-
+                {/* <div className="flex items-center justify-center gap-2">
                   <div className="link__btn">
                     <Printer color="white" />
                   </div>
                   <div className="text-sm">Avec une <span className="text-nowrap">mini-imprimante</span></div>
-                </div>
+                </div> */}
                 <div className="flex items-center justify-center gap-2">
 
                   <div className="link__btn">
@@ -126,13 +128,48 @@ const LandingPage = () => {
                   <div className="text-sm text-slate-400">sur Messenger</div>
                 </div>
                 <div className="flex-none flex items-center gap-2">
-                  <div>80000 <span className="text-sm text-slate-400">Ariary</span></div>
+                  <div>80 000 <span className="text-sm text-slate-400">Ariary</span></div>
                   <div className="link__btn">
                     <Facebook color="white" />
                   </div>
                 </div>
 
               </a>
+            </div>
+            <div className="pt-8 p-2 px-8 bg-white lg:flex flex-col lg:justify-center flex-none max-w-xl shadow-xl  skew-x-2 hover:scale-85 transition-all duration-300 scale-90">
+              <div className="text-center my-4">
+                <h1 className="text-2xl font-medium">Application générateur de facture</h1>
+              </div>
+
+              <p className="mt-2 text-slate-500 text-center">
+                Genérer une facture en un clique via des formulaires très simples.
+              </p>
+              <p className="mb-2 text-slate-500 text-center">
+                Avec divers modèles de factures prêtes à être utilisées.
+              </p>
+
+
+
+
+
+              <Link
+                to={"#"} 
+                // target="_blank" rel="noopener noreferrer"
+                className="flex-none p-2 mt-4 mb-2 bg-zinc-800 rounded-full text-white flex items-center justify-between hover:shadow-2xl hover:translate-y-[-4px] hover:transition-all duration-300">
+                <div className="ml-4">
+                  <div>
+                    Coming Soon
+                  </div>
+                  <div className="text-sm text-slate-400">sur Téléphone mobile</div>
+                </div>
+                <div className="flex-none flex items-center gap-2">
+                  {/* <div>80000 <span className="text-sm text-slate-400">Ariary</span></div> */}
+                  <div className="link__btn">
+                    <Smartphone color="white" />
+                  </div>
+                </div>
+
+              </Link>
             </div>
 
           </div>
