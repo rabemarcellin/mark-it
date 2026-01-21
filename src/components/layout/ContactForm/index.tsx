@@ -135,7 +135,7 @@ const ContactForm = () => {
                                                 <AppLogo />
                                             </p>
                                             <p className="mt-1 text-sm text-gray-500">
-                                                Message reçu, je vous repondrai au plus vite.
+                                                Message reçu, on vous repondra au plus vite.
                                             </p>
                                         </div>
                                     </div>
@@ -339,12 +339,12 @@ const ContactForm = () => {
                             101, Antananarivo, Madagascar
                         </div>
                         <div>
-                            contact@logo.mg
-                        </div>
-                        <div>
                             Site crée et maintenue par <a href="https://rabemarcellin.netlify.app" className="font-medium text-black" target="_blank" rel="noopener noreferrer">RABE Marcellin {"</>"} </a>
                             - 2026
                         </div>
+                        <a href="mailto:marcellinr.rabe@gmail.com">
+                            marcellinr.rabe@gmail.com
+                        </a>
                     </div>
                 </div>
             </div>
