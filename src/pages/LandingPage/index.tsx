@@ -68,6 +68,7 @@ const LandingPage = () => {
       image: RAMImg,
       link: "https://web.facebook.com/share/p/18dGjZKQCs/",
     },
+    null,
     {
       name: "Keycaps (87 keys)",
       description: `Keycaps complet ho an'ny clavier mecanique TKL (87 keys)
@@ -91,7 +92,7 @@ const LandingPage = () => {
       setActivateNavbaDarkMode(false)
     }
   }, [inView])
-  
+
   return (
     <div className="max-w-6x mx-auto md:px-0 bg-gray-200">
       <Navbar activateDarkMode={activateNavbarDarkMode} />
@@ -137,13 +138,14 @@ const LandingPage = () => {
 
         <div className="lg:-skew-x-1">
           <ResponsiveMasonry
-            columnsCountBreakPoints={{ 750: 2, 900: 3 }}
+            columnsCountBreakPoints={{ 750: 2 }}
             gutterBreakPoints={{ 350: 12, 750: 16, 900: 24 }}
           >
             <Masonry>
               {
                 products.map((product) => (
-                  <ProductCard key={product.name} {...product} />
+                  product ? 
+                  <ProductCard key={product.name} {...product} /> : <div key={'null'} className="h-48" />
                 ))
               }
             </Masonry>
