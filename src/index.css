@@ -4,6 +4,8 @@
 @import './components/custom/ExternalLink/style.css';
 @import './components/custom/SwitchMenuButton/style.css';
 @import './components/layout/ContactForm/style.css';
+@import './features/product/ui/ProductCard/product_card.css';
+
 
 body {
   font-family: 'Montserrat', 'Open Sans', sans-serif;

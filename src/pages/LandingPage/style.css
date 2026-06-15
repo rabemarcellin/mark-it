@@ -90,3 +90,13 @@ img[style*="campaing-index: 0"] {
     @apply h-10 rounded-full bg-white;
     border-radius: 50% 50% 0 0;
 }
+
+/* top first view
+ * About first view et presentation et menu
+*/
+.bg--setup {
+    background: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('@/assets/img/setup_gaming.webp');
+    background-size: cover;
+    background-position: center;
+}

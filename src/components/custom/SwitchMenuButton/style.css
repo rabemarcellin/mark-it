@@ -7,7 +7,7 @@
 }
 
 .switch-menu-button button {
-    @apply  p-2 rounded-full flex-auto z-10;
+    @apply  p-2 rounded-full flex-auto z-10 text-sm lg:text-base;
 
     &.active {
         @apply bg-white text-slate-500 shadow-md;

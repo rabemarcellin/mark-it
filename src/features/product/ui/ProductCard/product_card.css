@@ -1,0 +1,40 @@
+.product-card {
+
+    width: 360px;
+    height: auto;
+    padding: 4px;
+    border-radius: 24px;
+    @apply bg-black text-white font-medium;
+}
+
+.product-card--layout {
+    border-radius: 20px;
+    @apply relative overflow-hidden bg-black/50;
+    min-height: 200px;
+    max-height: 480px;
+    
+}
+
+.product-card__details {
+    @apply absolute bottom-0 left-0 w-full p-4 backdrop-blur-xs bg-slate-800;
+
+    /* Le masque magique : transparent en haut (0%), opaque en bas (100%) */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+}
+
+/* .product-card__details * {
+    @apply bg-white/10 backdrop-blur-sm w-fit p-1 rounded-md;
+} */
+
+.product-card__name {
+    @apply text-sm lg:text-base;
+}
+
+.product-card__description {
+    @apply text-xs lg:text-sm;
+}
+
+.product-card__price {
+    @apply text-sm ;
+}
