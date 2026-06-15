@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { useTranslation } from "react-i18next";
 // import PrinterXsImg from "@/assets/img/printer_xs.jpg";
 // import PrinterXsVideo from "@/assets/video/printer_xs.mp4";
@@ -11,17 +11,20 @@ import ContactForm from "@/components/layout/ContactForm";
 import { FACEBOOK_PAGE_NAME, FACEBOOK_PAGE_URL } from "@/utils/constants";
 import PricingCardSecondary from "@/components/custom/PricingCardSecondary";
 
-import { Waypoint } from 'react-waypoint';
 import ProductCard from "@/features/product/ui/ProductCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import ComputerCaseImg from '@/assets/img/products/computer_case.jpg';
 import KeyCapsImg from '@/assets/img/products/keycaps_secondary.jpg';
 import RAMImg from '@/assets/img/products/ram.jpg';
+import { useInView } from 'react-intersection-observer';
 
 const LandingPage = () => {
   // const [highlightedCard, setHighlightedCard] = useState<number>(0);
   const [activateNavbarDarkMode, setActivateNavbaDarkMode] = useState<boolean>(false);
   const [selectedBoostType, setSelectedBoostType] = useState<string>("day");
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
 
 
   const switchMenuButtonActions = [
@@ -80,15 +83,19 @@ const LandingPage = () => {
   // const handleCardClick = (index: number) => {
   //   setHighlightedCard(index);
   // };
+
+  useEffect(() => {
+    if (inView) {
+      setActivateNavbaDarkMode(true)
+    } else {
+      setActivateNavbaDarkMode(false)
+    }
+  }, [inView])
+  
   return (
     <div className="max-w-6x mx-auto md:px-0 bg-gray-200">
       <Navbar activateDarkMode={activateNavbarDarkMode} />
-
-      <Waypoint
-        onEnter={() => setActivateNavbaDarkMode(true)}
-        onLeave={() => setActivateNavbaDarkMode(false)}
-      >
-        <div className="leading-relaxed px-4 lg:h-screen max-h-[1400px] bg--setup text-white">
+        <div ref={ref} className="leading-relaxed px-4 lg:h-screen max-h-[1400px] bg--setup text-white">
 
           <div className="lg:flex lg:items-end lg:gap-4 max-w-6xl mx-auto h-full pt-20">
 
@@ -116,7 +123,6 @@ const LandingPage = () => {
           </div>
 
         </div>
-      </Waypoint>
 
       <div id="offer_and_services" className="h-0 lg:h-10" />
 
